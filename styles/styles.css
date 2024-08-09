@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*Variáveis de cores*/
+:root {
+  --bg-main: #131313;
+  --foreground: #f8f8f2;
+  --cyan: #00ffe1;
+  --white: #fff;
+
+  --bg-main-brighter: brightness(150%);
+}
+
+/*regras de cunho geral*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg-main);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--white);
+  margin: 0 12rem;
+}
+
+section{
+  display:flex;
+  flex-direction: column;
+  gap:2rem;
+  margin: 2rem 0;
+  place-items: flex-start;
+  align-items: flex-start;
+  min-height:100vh;
+}
+
+h2{
+  font-size: 3rem;
+  border-left: 1rem solid var(--cyan);
+  padding: 0 1rem;
+}
+
+p{
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+/* INICIO - Cabeçalho */
+header{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  gap:64px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.avatar{
+  height:550px;
+  width:100%;
+  background: linear-gradient(to top, var(--cyan) 35%, var(--bg-main) 35%);
+  padding: 0 24px;
+}
+.avatar > img{
+  height:100%;
+  width:100%;
+  object-fit: none;
+  object-position: bottom;
+}
+
+h1{
+  font-size: 4rem;
+  color: var(--cyan);
+}
+/* FIM - Cabeçalho */
+
+/*INICIO - menu*/
+.menu-container {
+  background: var(--bg-main);
+  filter: var(--bg-main-brighter);
+  width: 100%;
+  padding: 24px;
+  margin: 2rem 0;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.menu li{
+  float: left;
+}
+.menu a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.active {
+  border-bottom: 2px solid var(--cyan);
+  color: var(--cyan);
+  font-weight: bold;
+  cursor: default;
+}
+/*FIM menu*/
+
+.container-column{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container-row{
+  display:flex;
+  gap:2rem;
+}
+
+.icon{
+  height:3rem;
+}
+
+.hidden{
+  opacity: 0;
+  filter: blur(20px);
+  transition: all 1s ease;
+  transform: translateX(-100%);
+}
+.show{
+  opacity: 1;
+  filter: blur(0px);
+  transition: all 1s ease;
+  transform: translateX(0);
+}
+
+.cards-container{
+  display:flex;
+  gap:20px
+}
+.cards-container :nth-child(2){
+transition-delay: 400ms;
+}
+.cards-container :nth-child(3){
+transition-delay: 700ms;
+}
+.card{
+  height:200px;
+  background-color: #131313;
+  border-radius: 15px;
+  margin:5px
+}

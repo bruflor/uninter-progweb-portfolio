@@ -1,6 +1,5 @@
 
 const elementsHidden = document.querySelectorAll(".hidden");
-const elementsShow = document.querySelectorAll(".show");
 
 const myObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -11,7 +10,6 @@ const myObserver = new IntersectionObserver((entries) => {
       entry.target.classList.remove("show");
     }
   })
-  console.log(entries)
 })
 
 elementsHidden.forEach(element => {
