@@ -23,14 +23,17 @@ body{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   color: var(--white);
-  margin: 0 12rem;
+  padding: 0 12rem;
 }
-
+@media only screen and (max-width: 960px){
+  body{
+    padding: 0 4rem;
+  }
+}
 section{
   display:flex;
   flex-direction: column;
   gap:2rem;
-  margin: 2rem 0;
   place-items: flex-start;
   align-items: flex-start;
   min-height:100vh;
@@ -49,6 +52,11 @@ p{
 
 /* INICIO - Cabeçalho */
 header{
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.hero{
   display: flex;
   width: 100%;
   height: fit-content;
@@ -58,15 +66,17 @@ header{
 }
 
 .avatar{
-  height:550px;
+  height:400px;
   width:100%;
   background: linear-gradient(to top, var(--cyan) 35%, var(--bg-main) 35%);
   padding: 0 24px;
+  overflow: hidden;
 }
 .avatar > img{
   height:100%;
-  width:100%;
-  object-fit: none;
+  min-width:300px;
+  width:auto;
+  object-fit: scale-down;
   object-position: bottom;
 }
 
@@ -81,20 +91,30 @@ h1{
   background: var(--bg-main);
   filter: var(--bg-main-brighter);
   width: 100%;
-  padding: 24px;
+  padding: 2rem;
   margin: 2rem 0;
 }
 
-.menu {
+.sticky{
+  position: fixed;
+  top: 0;
+  right:0;
+  z-index: 1;
+  /*transition: all 0.5s ease;*/
+  padding: 2rem 15rem;
+  margin:0;
+}
+
+.menu-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-.menu li{
+.menu-list li{
   float: left;
 }
-.menu a {
+.menu-list a {
   display: block;
   color: white;
   text-align: center;
