@@ -1,0 +1,16 @@
+.cards-container{
+  display:flex;
+  gap:20px
+}
+.cards-container :nth-child(2){
+  transition-delay: 400ms;
+}
+.cards-container :nth-child(3){
+  transition-delay: 700ms;
+}
+.card{
+  height:200px;
+  background-color: #131313;
+  border-radius: 5px;
+  margin:5px
+}

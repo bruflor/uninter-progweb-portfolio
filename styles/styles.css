@@ -68,9 +68,10 @@ header{
 .avatar{
   height:400px;
   width:100%;
-  background: linear-gradient(to top, var(--cyan) 35%, var(--bg-main) 35%);
+  background: linear-gradient(to top, var(--cyan) 50%, var(--bg-main) 50%);
   padding: 0 24px;
   overflow: hidden;
+  align-items: center;
 }
 .avatar > img{
   height:100%;
@@ -100,7 +101,6 @@ h1{
   top: 0;
   right:0;
   z-index: 1;
-  /*transition: all 0.5s ease;*/
   padding: 2rem 15rem;
   margin:0;
 }
@@ -158,19 +158,3 @@ h1{
   transform: translateX(0);
 }
 
-.cards-container{
-  display:flex;
-  gap:20px
-}
-.cards-container :nth-child(2){
-transition-delay: 400ms;
-}
-.cards-container :nth-child(3){
-transition-delay: 700ms;
-}
-.card{
-  height:200px;
-  background-color: #131313;
-  border-radius: 15px;
-  margin:5px
-}
