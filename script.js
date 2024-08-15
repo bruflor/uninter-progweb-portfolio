@@ -17,10 +17,9 @@ elementsHidden.forEach(element => {
 })
 
 const menu = document.getElementById('menu');
-const hero = document.getElementById('hero')
 
 // When the user scrolls the page, execute sticky to menu
-const siteHeaderHeight = hero.offsetHeight;
+const siteHeaderHeight = menu.offsetHeight;
 
 window.addEventListener('scroll', () => {
   const top = document.documentElement.scrollTop || document.body.scrollTop;
