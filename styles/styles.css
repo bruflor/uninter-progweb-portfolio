@@ -5,7 +5,7 @@
   --bg-main: #131313;
   --foreground: #f8f8f2;
   --cyan: #00ffe1;
-  --cyan-light: #86efe5;
+  --cyan-light: #6be9dc;
   --white: #fff;
 
   --bg-main-brighter: brightness(150%);
@@ -38,9 +38,9 @@ body{
   width: 60%;
 }
 
+/* INICIO FOOTER */
 footer{
   display:flex;
-  gap:1rem;
   background-color: var(--bg-main);
   filter: var(--bg-main-brighter);
   height: 250px;
@@ -50,11 +50,13 @@ footer{
   padding: 2rem 2rem;
 }
 
-footer > div{
-  display:flex;
-  gap:2rem;
-  align-items: flex-start;
-  justify-content: space-between;
+.container-footer{
+  display: flex;
+  gap: 4rem
+}
+
+.container-footer > div{
+  width: 50%;
 }
 
 .contact-link {
@@ -76,7 +78,7 @@ footer > div{
   height: 1rem;
   filter: invert(42%) brightness(150%);
 }
-
+/* FIM FOOTER */
 
 section{
   display:flex;
@@ -199,21 +201,18 @@ h1{
 }
 
 .button{
-  line-height: 2rem;
-  padding: 0 2rem;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
+  padding: 0 2rem;
   text-decoration: none;
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+  width: fit-content;
 }
 .button>img{
   height:1rem;
-}
-
-.btn-big{
-  line-height: 2.5rem;
-  font-size: 1.25rem;
 }
 
 .solid{
@@ -223,8 +222,9 @@ h1{
 }
 
 .solid:hover{
-  filter: var(--cyan-brighter);
-  transition: background-color 400ms ease;
+  background-color: var(--cyan-light);
+  filter: var(--cyan-darker);
+  transition: filter 400ms ease;
 }
 
 .outline{
