@@ -5,9 +5,12 @@
   --bg-main: #131313;
   --foreground: #f8f8f2;
   --cyan: #00ffe1;
+  --cyan-light: #86efe5;
   --white: #fff;
 
   --bg-main-brighter: brightness(150%);
+  --cyan-brighter: brightness(120%);
+  --cyan-darker: brightness(80%);
 }
 
 /*regras de cunho geral*/
@@ -62,12 +65,12 @@ header{
   height: fit-content;
   gap:64px;
   align-items: flex-end;
-  justify-content: space-between;
 }
 
 .avatar{
   height:400px;
-  width:100%;
+  width:50%;
+  min-width: 250px;
   background: linear-gradient(to top, var(--cyan) 50%, var(--bg-main) 50%);
   padding: 0 24px;
   overflow: hidden;
@@ -76,7 +79,7 @@ header{
 .avatar > img{
   height:100%;
   min-width:300px;
-  width:auto;
+  width:100%;
   object-fit: scale-down;
   object-position: bottom;
 }
@@ -121,7 +124,9 @@ h1{
   padding: 16px;
   text-decoration: none;
 }
-
+.menu-list a:hover{
+  color: var(--cyan);
+}
 .active {
   border-bottom: 2px solid var(--cyan);
   color: var(--cyan);
@@ -138,11 +143,46 @@ h1{
 
 .container-row{
   display:flex;
-  gap:2rem;
+  gap:1rem;
 }
 
 .icon{
   height:3rem;
+}
+
+.button{
+  line-height: 2rem;
+  padding: 0 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button>img{
+  height:1rem;
+}
+
+.solid{
+  background-color: var(--cyan);
+  border: none;
+  color: var(--bg-main)
+}
+
+.solid:hover{
+  filter: var(--cyan-brighter);
+  transition: background-color 400ms ease;
+}
+
+.outline{
+  background-color: transparent;
+  border: 2px solid var(--cyan);
+  color: var(--cyan);
+}
+
+.outline:hover{
+  background-color: rgba(255,255,255,10%);
+  filter: var(--cyan-brighter);
 }
 
 .hidden{
