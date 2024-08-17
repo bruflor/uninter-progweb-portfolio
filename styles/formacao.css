@@ -1,0 +1,141 @@
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Linha da timeline */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    border-radius: 4px;
+    width: 12px;
+    background-color: var(--bg-main);
+    filter:brightness(250%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+/* Contêiner ao redor do conteúdo */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 75%;
+  }
+  
+  /* quadrados */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -20px;
+    background-color: var(--bg-main);
+    border: 4px solid var(--cyan);
+    top: 15px;
+    z-index: 1;
+  }
+  /* Container secundario */
+  .container-secondary {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 75%;
+  }
+  
+  /* quadrados secundarios */
+  .container-secondary::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 15px;
+    background-color: var(--bg-main);
+    border: 4px solid var(--white);
+    top: 20px;
+    z-index: 1;
+  }
+  
+  .left {
+    left: -25%;
+  }
+  
+  .right {
+    left: 50%;
+  }
+  
+  
+  .right::after {
+    left: -16px;
+  }
+
+  .container-secondary.right::after{
+    left:-10px;
+  }
+  .container-secondary.left::after{
+    right:-14px;
+  }
+  
+  .content {
+    padding: 20px 30px;
+    background-color: var(--bg-main);
+    filter: var(--bg-main-brighter);
+    position: relative;
+    border-radius: 6px;
+    width: 100%;
+    gap:1rem;
+    display:flex;
+    flex-direction: column;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .timeline::after {
+      left: 31px;
+    }
+  
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-color: transparent var(--bg-main) transparent transparent;
+      border-width: 10px 10px 10px 0;
+    }
+    .container-secondary {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .container-secondary::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--bg-main) transparent transparent;
+    }
+  
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+    .right {
+      left: 0;
+    }
+    .left {
+        left: 0;
+      }
+    .container-secondary.right::after{
+        left:20px;
+    }
+    .container-secondary.left::after{
+        left:20px;
+    }
+  }

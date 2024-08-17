@@ -1,5 +1,6 @@
 
-const elementsHidden = document.querySelectorAll(".hidden");
+const elementsHiddenLeft = document.querySelectorAll(".hidden-left");
+const elementsHiddenRight = document.querySelectorAll(".hidden-right");
 
 const myObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -12,7 +13,10 @@ const myObserver = new IntersectionObserver((entries) => {
   })
 })
 
-elementsHidden.forEach(element => {
+elementsHiddenLeft.forEach(element => {
+  myObserver.observe(element)
+})
+elementsHiddenRight.forEach(element => {
   myObserver.observe(element)
 })
 
