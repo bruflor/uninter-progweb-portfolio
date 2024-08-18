@@ -159,6 +159,13 @@ footer{
   height: 1rem;
   filter: invert(42%) brightness(150%);
 }
+.rights{
+  font-size:1rem;
+  color: #575757;
+  font-weight: light;
+  text-align: end;
+  margin-top: 1rem;
+}
 /* FIM FOOTER */
 
 
@@ -253,6 +260,8 @@ p{
   transition: all 1s ease;
   transform: translateX(0);
 }
+
+
 
 @media screen and (max-width: 1200px) {
 
