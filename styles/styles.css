@@ -285,6 +285,7 @@ p{
 
   .avatar{
     width: 90%;
+    height:250px;
   }
 
   footer{
@@ -302,6 +303,18 @@ p{
     width: 100%;
   }
 
+  .menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+  }
   .sticky{
     padding: 2rem;
   }
